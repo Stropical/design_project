@@ -1,0 +1,178 @@
+|DesignProject
+Seg0[0] <= TriSegDriver:instvcvc.O1[0]
+Seg0[1] <= TriSegDriver:instvcvc.O1[1]
+Seg0[2] <= TriSegDriver:instvcvc.O1[2]
+Seg0[3] <= TriSegDriver:instvcvc.O1[3]
+Seg0[4] <= TriSegDriver:instvcvc.O1[4]
+Seg0[5] <= TriSegDriver:instvcvc.O1[5]
+Seg0[6] <= TriSegDriver:instvcvc.O1[6]
+RESET => TenBitReg:inst4.Reset
+CLOCK => TenBitReg:inst4.Clock
+INPUT[0] => TenBitReg:inst4.D[0]
+INPUT[1] => TenBitReg:inst4.D[1]
+INPUT[2] => TenBitReg:inst4.D[2]
+INPUT[3] => TenBitReg:inst4.D[3]
+INPUT[4] => TenBitReg:inst4.D[4]
+INPUT[5] => TenBitReg:inst4.D[5]
+INPUT[6] => TenBitReg:inst4.D[6]
+INPUT[7] => TenBitReg:inst4.D[7]
+INPUT[8] => TenBitReg:inst4.D[8]
+INPUT[9] => TenBitReg:inst4.D[9]
+Seg1[0] <= TriSegDriver:instvcvc.O2[0]
+Seg1[1] <= TriSegDriver:instvcvc.O2[1]
+Seg1[2] <= TriSegDriver:instvcvc.O2[2]
+Seg1[3] <= TriSegDriver:instvcvc.O2[3]
+Seg1[4] <= TriSegDriver:instvcvc.O2[4]
+Seg1[5] <= TriSegDriver:instvcvc.O2[5]
+Seg1[6] <= TriSegDriver:instvcvc.O2[6]
+Seg2[0] <= TriSegDriver:instvcvc.O3[0]
+Seg2[1] <= TriSegDriver:instvcvc.O3[1]
+Seg2[2] <= TriSegDriver:instvcvc.O3[2]
+Seg2[3] <= TriSegDriver:instvcvc.O3[3]
+Seg2[4] <= TriSegDriver:instvcvc.O3[4]
+Seg2[5] <= TriSegDriver:instvcvc.O3[5]
+Seg2[6] <= TriSegDriver:instvcvc.O3[6]
+
+
+|DesignProject|TriSegDriver:instvcvc
+hex[0] => hex1[0].IN1
+hex[1] => hex1[1].IN1
+hex[2] => hex1[2].IN1
+hex[3] => hex1[3].IN1
+hex[4] => hex2[0].IN1
+hex[5] => hex2[1].IN1
+hex[6] => hex2[2].IN1
+hex[7] => hex2[3].IN1
+hex[8] => hex3[0].IN1
+hex[9] => hex3[1].IN1
+O1[0] <= SevSegDriver:seg1.O
+O1[1] <= SevSegDriver:seg1.O
+O1[2] <= SevSegDriver:seg1.O
+O1[3] <= SevSegDriver:seg1.O
+O1[4] <= SevSegDriver:seg1.O
+O1[5] <= SevSegDriver:seg1.O
+O1[6] <= SevSegDriver:seg1.O
+O2[0] <= SevSegDriver:seg2.O
+O2[1] <= SevSegDriver:seg2.O
+O2[2] <= SevSegDriver:seg2.O
+O2[3] <= SevSegDriver:seg2.O
+O2[4] <= SevSegDriver:seg2.O
+O2[5] <= SevSegDriver:seg2.O
+O2[6] <= SevSegDriver:seg2.O
+O3[0] <= SevSegDriver:seg3.O
+O3[1] <= SevSegDriver:seg3.O
+O3[2] <= SevSegDriver:seg3.O
+O3[3] <= SevSegDriver:seg3.O
+O3[4] <= SevSegDriver:seg3.O
+O3[5] <= SevSegDriver:seg3.O
+O3[6] <= SevSegDriver:seg3.O
+
+
+|DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg1
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+O[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+O[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+O[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+O[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg2
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+O[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+O[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+O[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+O[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg3
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+O[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+O[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+O[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+O[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+O[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+O[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+O[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DesignProject|SubtractOne:inst1
+A[0] => Add0.IN20
+A[1] => Add0.IN19
+A[2] => Add0.IN18
+A[3] => Add0.IN17
+A[4] => Add0.IN16
+A[5] => Add0.IN15
+A[6] => Add0.IN14
+A[7] => Add0.IN13
+A[8] => Add0.IN12
+A[9] => Add0.IN11
+C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+C[9] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DesignProject|TenBitReg:inst4
+Q[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+Reset => inst9.ACLR
+Reset => inst8.ACLR
+Reset => inst7.ACLR
+Reset => inst6.ACLR
+Reset => inst5.ACLR
+Reset => inst4.ACLR
+Reset => inst3.ACLR
+Reset => inst2.ACLR
+Reset => inst1.ACLR
+Reset => inst.ACLR
+Clock => inst9.CLK
+Clock => inst8.CLK
+Clock => inst7.CLK
+Clock => inst6.CLK
+Clock => inst5.CLK
+Clock => inst4.CLK
+Clock => inst3.CLK
+Clock => inst2.CLK
+Clock => inst1.CLK
+Clock => inst.CLK
+D[0] => inst.DATAIN
+D[1] => inst1.DATAIN
+D[2] => inst2.DATAIN
+D[3] => inst3.DATAIN
+D[4] => inst4.DATAIN
+D[5] => inst5.DATAIN
+D[6] => inst6.DATAIN
+D[7] => inst7.DATAIN
+D[8] => inst8.DATAIN
+D[9] => inst9.DATAIN
+
+

@@ -1,0 +1,137 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Seg0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Seg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[8]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

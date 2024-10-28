@@ -1,7 +1,13 @@
 module SevSegDriver(
-    input wire [3:0] hex,                // Most Significant Bit (MSB)
+    input wire A,                // Least Significant Bit (LSB)
+    input wire B,
+    input wire C,
+    input wire D,                // Most Significant Bit (MSB)
     output reg [6:0] O           //
 );
+
+    // Combine inputs into a 4-bit number
+    wire [3:0] hex = {A, B, C, D};
 
     always @(*) begin
         case (hex)
