@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DesignProject
-Mon Oct 28 13:48:48 2024
+Thu Oct 31 12:23:32 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "TriSegDriver:instvcvc|SevSegDriver:seg3"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "TriSegDriver:instvcvc|SevSegDriver:seg3"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +45,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 28 13:48:48 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 31 12:23:32 2024          ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Lite Edition ;
 ; Revision Name                      ; DesignProject                                  ;
 ; Top-level Entity Name              ; DesignProject                                  ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 37                                             ;
-;     Total combinational functions  ; 27                                             ;
-;     Dedicated logic registers      ; 10                                             ;
-; Total registers                    ; 10                                             ;
+; Total logic elements               ; 51                                             ;
+;     Total combinational functions  ; 51                                             ;
+;     Dedicated logic registers      ; 30                                             ;
+; Total registers                    ; 30                                             ;
 ; Total pins                         ; 33                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -158,24 +159,24 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
-; SevSegDriver.v                   ; yes             ; User Verilog HDL File              ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/SevSegDriver.v     ;         ;
-; DesignProject.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/DesignProject.bdf  ;         ;
-; TenBitReg.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/TenBitReg.bdf      ;         ;
-; TenBitSubtractor.v               ; yes             ; User Verilog HDL File              ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/TenBitSubtractor.v ;         ;
-; trisegdriver.v                   ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/trisegdriver.v     ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
+; SevSegDriver.v                   ; yes             ; User Verilog HDL File              ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/SevSegDriver.v        ;         ;
+; DesignProject.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/DesignProject.bdf     ;         ;
+; trisegdriver.v                   ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/trisegdriver.v        ;         ;
+; summationcalculator.v            ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/summationcalculator.v ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -183,46 +184,45 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 37          ;
+; Estimated Total logic elements              ; 51          ;
 ;                                             ;             ;
-; Total combinational functions               ; 27          ;
+; Total combinational functions               ; 51          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 14          ;
-;     -- 3 input functions                    ; 0           ;
-;     -- <=2 input functions                  ; 13          ;
+;     -- 4 input functions                    ; 16          ;
+;     -- 3 input functions                    ; 11          ;
+;     -- <=2 input functions                  ; 24          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 18          ;
-;     -- arithmetic mode                      ; 9           ;
+;     -- normal mode                          ; 33          ;
+;     -- arithmetic mode                      ; 18          ;
 ;                                             ;             ;
-; Total registers                             ; 10          ;
-;     -- Dedicated logic registers            ; 10          ;
+; Total registers                             ; 30          ;
+;     -- Dedicated logic registers            ; 30          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
 ; I/O pins                                    ; 33          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; CLOCK~input ;
-; Maximum fan-out                             ; 10          ;
-; Total fan-out                               ; 164         ;
-; Average fan-out                             ; 1.59        ;
+; Maximum fan-out node                        ; RESET~input ;
+; Maximum fan-out                             ; 31          ;
+; Total fan-out                               ; 307         ;
+; Average fan-out                             ; 2.09        ;
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+---------------+--------------+
-; |DesignProject             ; 27 (0)              ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 33   ; 0            ; 0          ; |DesignProject                                         ; DesignProject ; work         ;
-;    |SubtractOne:inst1|     ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|SubtractOne:inst1                       ; SubtractOne   ; work         ;
-;    |TenBitReg:inst4|       ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TenBitReg:inst4                         ; TenBitReg     ; work         ;
-;    |TriSegDriver:instvcvc| ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TriSegDriver:instvcvc                   ; TriSegDriver  ; work         ;
-;       |SevSegDriver:seg1|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg1 ; SevSegDriver  ; work         ;
-;       |SevSegDriver:seg2|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg2 ; SevSegDriver  ; work         ;
-;       |SevSegDriver:seg3|  ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg3 ; SevSegDriver  ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+---------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                              ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name         ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+---------------------+--------------+
+; |DesignProject                ; 51 (0)              ; 30 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 33   ; 0            ; 0          ; |DesignProject                                         ; DesignProject       ; work         ;
+;    |SummationCalculator:inst| ; 34 (34)             ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|SummationCalculator:inst                ; SummationCalculator ; work         ;
+;    |TriSegDriver:instvcvc|    ; 17 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TriSegDriver:instvcvc                   ; TriSegDriver        ; work         ;
+;       |SevSegDriver:seg1|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg1 ; SevSegDriver        ; work         ;
+;       |SevSegDriver:seg2|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg2 ; SevSegDriver        ; work         ;
+;       |SevSegDriver:seg3|     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DesignProject|TriSegDriver:instvcvc|SevSegDriver:seg3 ; SevSegDriver        ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,14 +231,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 10    ;
+; Total registers                              ; 30    ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 10    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DesignProject|SummationCalculator:inst|SUM[3]   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DesignProject|SummationCalculator:inst|COUNT[9] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -256,19 +266,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 33                          ;
-; cycloneiii_ff         ; 10                          ;
-;     CLR               ; 10                          ;
-; cycloneiii_lcell_comb ; 31                          ;
-;     arith             ; 9                           ;
+; cycloneiii_ff         ; 30                          ;
+;     ENA SCLR          ; 10                          ;
+;     ENA SLD           ; 10                          ;
+;     plain             ; 10                          ;
+; cycloneiii_lcell_comb ; 55                          ;
+;     arith             ; 18                          ;
 ;         2 data inputs ; 9                           ;
-;     normal            ; 22                          ;
+;         3 data inputs ; 9                           ;
+;     normal            ; 37                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 3                           ;
-;         4 data inputs ; 14                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.70                        ;
-; Average LUT depth     ; 2.43                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -287,7 +301,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Lite Edition
-    Info: Processing started: Mon Oct 28 13:48:42 2024
+    Info: Processing started: Thu Oct 31 12:23:26 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DesignProject -c DesignProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
@@ -314,20 +328,21 @@ Warning (12125): Using design file trisegdriver.v, which is not specified as a d
     Info (12023): Found entity 1: TriSegDriver File: C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/trisegdriver.v Line: 1
 Info (12128): Elaborating entity "TriSegDriver" for hierarchy "TriSegDriver:instvcvc"
 Info (12128): Elaborating entity "SevSegDriver" for hierarchy "TriSegDriver:instvcvc|SevSegDriver:seg1" File: C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/trisegdriver.v Line: 14
-Info (12128): Elaborating entity "SubtractOne" for hierarchy "SubtractOne:inst1"
-Info (12128): Elaborating entity "TenBitReg" for hierarchy "TenBitReg:inst4"
+Warning (12125): Using design file summationcalculator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: SummationCalculator File: C:/Users/ethan/OneDrive/Documents/GitHub/rust-ibapi/design_project/summationcalculator.v Line: 1
+Info (12128): Elaborating entity "SummationCalculator" for hierarchy "SummationCalculator:inst"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Seg2[1]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 21 output pins
-    Info (21061): Implemented 37 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Mon Oct 28 13:48:48 2024
+    Info (21061): Implemented 51 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Thu Oct 31 12:23:32 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:04
 

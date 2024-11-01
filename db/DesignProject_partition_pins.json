@@ -84,15 +84,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "INPUT[0]",
-					"strict" : false
-				},
-				{
-					"name" : "CLOCK",
-					"strict" : false
-				},
-				{
 					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[0]",
 					"strict" : false
 				},
 				{
@@ -124,11 +124,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "INPUT[9]",
+					"name" : "INPUT[8]",
 					"strict" : false
 				},
 				{
-					"name" : "INPUT[8]",
+					"name" : "INPUT[9]",
 					"strict" : false
 				}
 			]

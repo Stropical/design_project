@@ -1,0 +1,151 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Loading project Lab4Sim
+# reading C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project SumCalc
+# Compile of SummationCalculator.v was successful.
+do SumCalc.do
+# vsim -gui work.SummationCalculator 
+# Start time: 11:28:18 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:32:16 on Oct 31,2024, Elapsed time: 0:03:58
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:32:16 on Oct 31,2024
+# Loading work.SummationCalculator
+# ** Error: Invalid time value: 0 #
+# Error in macro ./SumCalc.do line 6
+# Invalid time value: 0 #
+#     while executing
+# "force -freeze sim:/SummationCalculator/A 10'b0000010100 0   # Example input, can be changed"
+do SumCalc.do
+# End time: 11:33:20 on Oct 31,2024, Elapsed time: 0:01:04
+# Errors: 3, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:33:20 on Oct 31,2024
+# Loading work.SummationCalculator
+# ** Error: (vsim-3464) Period of -repeat must not be less than the waveform length.
+# Error in macro ./SumCalc.do line 4
+# ** Error: (vsim-3464) Period of -repeat must not be less than the waveform length.
+# 
+#     while executing
+# "force CLK 0 0, 1 {50 ns} -r 100"
+do SumCalc.do
+# End time: 11:33:33 on Oct 31,2024, Elapsed time: 0:00:13
+# Errors: 1, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:33:33 on Oct 31,2024
+# Loading work.SummationCalculator
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro ./SumCalc.do line 4
+# ** Error: (vsim-4007) A value argument is required.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force CLK 0 0, 1 1, -r 100"
+do SumCalc.do
+# End time: 11:33:56 on Oct 31,2024, Elapsed time: 0:00:23
+# Errors: 2, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:33:56 on Oct 31,2024
+# Loading work.SummationCalculator
+# ** Error: Invalid time value: 0 #
+# Error in macro ./SumCalc.do line 6
+# Invalid time value: 0 #
+#     while executing
+# "force A 10'b0000010100 0   # Example input, can be changed"
+do SumCalc.do
+# End time: 11:34:12 on Oct 31,2024, Elapsed time: 0:00:16
+# Errors: 3, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:34:12 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:34:38 on Oct 31,2024, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:34:38 on Oct 31,2024
+# Loading work.SummationCalculator
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro ./SumCalc.do line 4
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force CLK 0 0 -r 100, 1 1 -r 100"
+do SumCalc.do
+# End time: 11:34:50 on Oct 31,2024, Elapsed time: 0:00:12
+# Errors: 2, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:34:50 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:35:45 on Oct 31,2024, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:35:45 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:35:54 on Oct 31,2024, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:35:54 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:36:35 on Oct 31,2024, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:36:35 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:37:43 on Oct 31,2024, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:37:43 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:37:56 on Oct 31,2024, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:37:56 on Oct 31,2024
+# Loading work.SummationCalculator
+
+do SumCalc.do
+# End time: 11:42:23 on Oct 31,2024, Elapsed time: 0:04:27
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:42:23 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:45:19 on Oct 31,2024, Elapsed time: 0:02:56
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:45:19 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:45:27 on Oct 31,2024, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:45:27 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:45:45 on Oct 31,2024, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:45:45 on Oct 31,2024
+# Loading work.SummationCalculator
+do SumCalc.do
+# End time: 11:48:52 on Oct 31,2024, Elapsed time: 0:03:07
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:48:52 on Oct 31,2024
+# Loading work.SummationCalculator
+# Compile of SummationCalculator.v was successful.
+do SumCalc.do
+# End time: 11:49:44 on Oct 31,2024, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 0
+# vsim -gui work.SummationCalculator 
+# Start time: 11:49:44 on Oct 31,2024
+# Loading work.SummationCalculator
+# End time: 11:53:14 on Oct 31,2024, Elapsed time: 0:03:30
+# Errors: 0, Warnings: 0
